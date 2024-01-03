@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Salin Wiki</title>
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <div>
+      <img src="https://salin-wiki.clavecillascc.repl.co/static/SWlogo01.png" height="50">
+      <nav id="top-bar">
+        <button>Log In</button>
+        <button>Sign Up</button>
+      </nav>
+    </div>
+    
+    <div>
+      <img src="https://salin-wiki.clavecillascc.repl.co/static/SWlogo02.png" height="50">
+      <h1>THE BEST WAY TO LEARN<br>PHILIPPINE LANGUAGES</h1>
+      <p>SalinWiki is the best Wiki site for your translation needs between<br>existing languages in the Philippines.</p>
+    </div
+      
+    <div>
+    <h6>Want to look up for a word?</h6>
+    <input type="text" id="input-box" placeholder="Search here!">
+    <button>Search</button>
+    </div>
+
+    <div>
+        {% for job in jobs%}
+          <div>{{job['title']}}</div>
+          <div>{{job['description']}}</div>
+        
+        {% endfor %}
+    </div>
+    
+  </body>
+</html>
