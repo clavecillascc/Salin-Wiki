@@ -1,43 +1,30 @@
-from flask import Flask, jsonify, render_template
+from flask import Flask, render_template
 
-#from database import load_jobs_from_db
+from database import load_words_from_db
 
 app = Flask(__name__)
 
-jobs = [{
-    'id': 1,
-    'title': 'Job 1',
-    'description': 'Job 1 description',
-    'company': 'Company 1',
-    'location': 'Location 1',
-    'salary': 'Salary 1'
-}, {
-    'id': 2,
-    'title': 'Job 2',
-    'description': 'Job 2 description',
-    'company': 'Company 2',
-    'location': 'Location 2',
-    'salary': 'Salary 2'
-}, {
-    'id': 3,
-    'title': 'Job 3',
-    'description': 'Job 3 description',
-    'company': 'Company 3',
-    'location': 'Location 3',
-    'salary': 'Salary 3'
-}]
+
+@app.route("/Home")
+def salinwiki_home():
+  words = load_words_from_db()
+  return render_template('0_home.html', words=words)
 
 
-@app.route("/")
-def salin_wiki():
-  #jobs = load_jobs_from_db()
-  return render_template('home.html', jobs=jobs)
+@app.route("/Dictionary")
+def salinwiki_dictionary():
+  words = load_words_from_db()
+  return render_template('1_dictionary.html', words=words)
 
 
-@app.route("/api/jobs")
-def list_jobs():
-  #jobs = load_jobs_from_db()
-  return jsonify(jobs)
+@app.route("/FAQs")
+def salinwiki_faqs():
+  return render_template('2_faqs.html')
+
+
+@app.route("/About")
+def salinwiki_about():
+  return render_template('3_about.html')
 
 
 if __name__ == "__main__":
