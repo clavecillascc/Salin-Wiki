@@ -5,7 +5,7 @@ from database import load_words_from_db
 app = Flask(__name__)
 
 
-@app.route("/Home")
+@app.route("/")
 def salinwiki_home():
   words = load_words_from_db()
   return render_template('0_home.html', words=words)
