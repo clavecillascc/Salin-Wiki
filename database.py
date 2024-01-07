@@ -1,10 +1,12 @@
 from sqlalchemy import create_engine, text
+import os
 
-engine = create_engine(
-    "mysql+pymysql://t7fwi5qjx5xjylj71qps:pscale_pw_ehO4Fofnpat8sMrAYbbjyDolgoPMsBJswTbXGhLPkUB@aws.connect.psdb.cloud/salinwiki?charset=utf8mb4",
-    connect_args={"ssl": {
-        "ssl_cert": "/etc/ssl/cert.pem"
-    }})
+my_secret = os.environ['DB_CONNECTION_STRING']
+
+engine = create_engine(my_secret,
+                       connect_args={"ssl": {
+                           "ssl_cert": "/etc/ssl/cert.pem"
+                       }})
 
 
 def load_words_from_db():
