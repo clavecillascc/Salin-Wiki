@@ -2,13 +2,15 @@ from flask import Flask, render_template
 
 from database import load_words_from_db
 
+from database import search_words_from_db
+
 app = Flask(__name__)
 
 
 @app.route("/")
 def salinwiki_home():
   words = load_words_from_db()
-  return render_template('0_home.html', words=words)
+  return render_template('0_home.html')
 
 
 @app.route("/Dictionary")
@@ -24,7 +26,7 @@ def salinwiki_faqs():
 
 @app.route("/About")
 def salinwiki_about():
-  return render_template('3_about.html')
+  return render_template('3_about.html', )
 
 
 if __name__ == "__main__":
