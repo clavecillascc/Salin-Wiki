@@ -2,8 +2,6 @@ from flask import Flask, render_template
 
 from database import load_words_from_db
 
-from database import search_words_from_db
-
 app = Flask(__name__)
 
 
