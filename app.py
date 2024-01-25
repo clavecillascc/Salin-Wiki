@@ -1,12 +1,28 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, url_for, request
 
 from database import load_words_from_db
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/", methods=["POST", "GET"])
 def salinwiki_home():
-  return render_template('0_home.html')
+  if request.method == "POST":
+    user = request.form["nm"]
+    return redirect(url_for("user", usr=user))
+    #return render_template('test.html', user=user)
+  else:
+    return render_template('0_home.html')
+
+@app.route("/<usr>")
+def user(usr):
+  words = load_words_from_db()
+  usr = usr
+  return render_template('test.html', usr=usr, words=words)
+
+@app.route("/Test")
+def test(usr):
+  words = load_words_from_db()
+  return render_template('1_dictionary.html', words=words)
 
 @app.route("/Dictionary")
 def salinwiki_dictionary():
@@ -20,11 +36,6 @@ def salinwiki_faqs():
 @app.route("/About")
 def salinwiki_about():
   return render_template('3_about.html')
-
-@app.route("/Test")
-def salinwiki_test():
-  words = load_words_from_db()
-  return render_template('test.html', words=words)
 
 @app.route("/Bicolano")
 def salinwiki_dictionary_bicolano():
