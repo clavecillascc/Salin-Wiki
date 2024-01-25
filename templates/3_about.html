@@ -9,19 +9,5 @@
   <body>
     {% include 'header.html' %} 
 
-    {% for search_word in words%}
-    <div>{{word['word']}}</div>
-    <div>{{word['lang']}}</div>
-    <div>
-      <p">: {{word['def']}}</p>
-    </div>
-    <div>{{word['src_ex']}}</div>
-    <div>
-      <p>({{word['lang']}})</p>
-    </div>
-    <div>{{word['target_ex']}} <p>(Tagalog)</p></div>
-    {% endfor %}
-    
-
   </body>
 </html>

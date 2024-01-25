@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Salin Wiki</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+      <link rel="stylesheet" href="{{ url_for('static', filename='styles/1_dictionary.css') }}">
+  </head>
+  <body>
+    {% include 'header.html' %} 
+    <div>
+      <div class="btn-group" role="group" aria-label="Basic outlined example">
+        <button type="button" class="btn btn-outline-primary" id="btn_a">ALL</button>
+        <button type="button" class="btn btn-outline-primary" id="btn_b">BICOLANO</button>
+        <button type="button" class="btn btn-outline-primary" id="btn_c">CEBUANO</button>
+        <button type="button" class="btn btn-outline-primary" id="btn_i">ILOCANO</button>
+      </div>
+      
+      <div>
+        {% for word in words|sort(attribute="word") %}
+            {% if word['lang'] == 'Cebuano' %}
+                <div>{{ word['word'] }}</div>
+                <div>{{ word['lang'] }}</div>
+                <div>
+                    <p>: {{ word['def'] }}</p>
+                </div>
+                <div>{{ word['src_ex'] }}</div>
+                <div>
+                    <p>({{ word['lang'] }})</p>
+                </div>
+                <div>{{ word['target_ex'] }}<p>(Tagalog)</p></div>
+            {% endif %}
+        {% endfor %}
+      </div>
+
+      <script>
+        btn_a = document.getElementById("btn_a");
+        btn_b = document.getElementById("btn_b");
+        btn_c = document.getElementById("btn_c");
+        btn_i = document.getElementById("btn_i");
+
+        isDisabled = false;
+
+        btn_c.disabled = !isDisabled;
+
+        btn_a.addEventListener("click", function() {
+          window.location.href = '/Dictionary';
+          btn_a.disabled = !isDisabled;
+          btn_b.disabled = isDisabled;
+          btn_c.disabled = isDisabled;
+          btn_i.disabled = isDisabled;
+        });
+
+        btn_b.addEventListener("click", function() {
+          window.location.href = '/Bicolano';
+          btn_a.disabled = isDisabled;
+          btn_b.disabled = !isDisabled;
+          btn_c.disabled = isDisabled;
+          btn_i.disabled = isDisabled;
+        });
+
+        btn_i.addEventListener("click", function() {
+          window.location.href = '/Ilocano';
+          btn_a.disabled = isDisabled;
+          btn_b.disabled = isDisabled;
+          btn_c.disabled = isDisabled;
+          btn_i.disabled = !isDisabled;
+        });
+      </script>
+      
+  </body>
+</html>
