@@ -11,6 +11,7 @@
 body{
   /* background-color:#201b15 */
   background-color:#efe1ba;
+  
 }
 
 #container-header{
@@ -31,3 +32,51 @@ body{
 
 /* ALL */
 
+
+.two-columns {
+    display: flex;
+}
+
+.column_search {
+    flex: 1; 
+}
+
+.searched-word-container {
+  background-color: #201b15;
+  color: #d79922;
+  border-radius:20px;
+  padding: 60px 0px 0px 40px;
+  margin: 100px 50px 100px 0px;
+  height: 615px;
+  width: 910px;
+}
+
+.word {
+  font-family: Maragsa;
+  font-size: 80px;
+}
+
+.lang1 {
+  font-size: 35px;
+  margin-top: -10px;
+}
+
+.def {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.src_ex {
+  font-size: 20px;
+  margin-left: 30px;
+}
+
+.lang2 {
+  font-size: 20px;
+  margin-left: 30px;
+}
+
+.target_ex {
+  font-size: 20px;
+  margin-left: 30px;
+}

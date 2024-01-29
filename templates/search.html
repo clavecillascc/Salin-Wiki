@@ -10,23 +10,32 @@
   <body>
     
     {% include 'header.html' %}
+
+    <div class="two-columns">
+        <div class="column_search">
+
+        </div>
+        <div class="column_search">
+          <div class="searched-word-container">
+            {% for word in words %}
+            {% if word['word'] == searched_word %}
+            <div class="word">{{ word['word'] }}</div>
+            <div class="lang1">{{ word['lang'] }}</div>
+            <div class="def">
+              <p>: {{ word['def'] }}</p>
+            </div>
+            <div class="src_ex">{{ word['src_ex'] }}</div>
+            <div class="lang2">
+              <p>({{ word['lang'] }})</p>
+            </div>
+            <div class="target_ex">{{ word['target_ex'] }}<p>(Tagalog)</p></div>
+            {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+    </div>
     
-      <div class="searched-word-container">
-        {% for word in words %}
-        {% if word['word'] == searched_word %}
-        <div>{{ word['word'] }}</div>
-        <div>{{ word['lang'] }}</div>
-        <div>
-          <p>: {{ word['def'] }}</p>
-        </div>
-        <div>{{ word['src_ex'] }}</div>
-        <div>
-          <p>({{ word['lang'] }})</p>
-        </div>
-        <div>{{ word['target_ex'] }}<p>(Tagalog)</p></div>
-        {% endif %}
-        {% endfor %}
-      </div>
+      
 
     {% include 'footer.html' %}
     
