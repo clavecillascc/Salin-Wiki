@@ -7,22 +7,16 @@ app = Flask(__name__)
 @app.route("/", methods=["POST", "GET"])
 def salinwiki_home():
   if request.method == "POST":
-    user = request.form["nm"]
-    return redirect(url_for("user", usr=user))
-    #return render_template('test.html', user=user)
+    searched_word = request.form["search"]
+    return redirect(url_for("search",searched_word=searched_word))
   else:
     return render_template('0_home.html')
 
-@app.route("/<usr>")
-def user(usr):
+@app.route("/<searched_word>")
+def search(searched_word):
   words = load_words_from_db()
-  usr = usr
-  return render_template('test.html', usr=usr, words=words)
-
-@app.route("/Test")
-def test(usr):
-  words = load_words_from_db()
-  return render_template('1_dictionary.html', words=words)
+  searched_word = searched_word
+  return render_template('search.html', searched_word=searched_word, words=words)
 
 @app.route("/Dictionary")
 def salinwiki_dictionary():

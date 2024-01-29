@@ -1,0 +1,33 @@
+@font-face {
+    font-family: Quiapo;
+    src: url("../fonts/Quiapo_Free.otf");
+}
+
+@font-face {
+    font-family: Maragsa;
+    src: url("../fonts/Maragsâ-Display.otf");
+}
+
+body{
+  /* background-color:#201b15 */
+  background-color:#efe1ba;
+}
+
+#container-header{
+  background-color:#201b15;
+  margin: 0px;
+  max-width: 100%;
+}
+
+#container-footer{
+  background-color:#201b15;
+  margin: 0px;
+  max-width: 100%;
+}
+
+#text-footer{
+  color:white;
+}
+
+/* ALL */
+
