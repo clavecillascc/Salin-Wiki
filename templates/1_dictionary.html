@@ -8,15 +8,15 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/1_dictionary.css') }}">
   </head>
   <body>
+    
     {% include 'header.html' %} 
     
-    <div>
-      <div class="btn-group" role="group" aria-label="Basic outlined example">
+    <div class="btn-group" role="group" aria-label="Basic outlined example">
         <button type="button" class="btn btn-outline-primary" id="btn_a">ALL</button>
         <button type="button" class="btn btn-outline-primary" id="btn_b">BICOLANO</button>
         <button type="button" class="btn btn-outline-primary" id="btn_c">CEBUANO</button>
         <button type="button" class="btn btn-outline-primary" id="btn_i">ILOCANO</button>
-      </div>
+    </div>
       
     <div>
       {% for word in words|sort(attribute="word")%}
@@ -33,40 +33,42 @@
       {% endfor %}
     </div>
 
-      <script>
-        btn_a = document.getElementById("btn_a");
-        btn_b = document.getElementById("btn_b");
-        btn_c = document.getElementById("btn_c");
-        btn_i = document.getElementById("btn_i");
+    <script>
+      btn_a = document.getElementById("btn_a");
+      btn_b = document.getElementById("btn_b");
+      btn_c = document.getElementById("btn_c");
+      btn_i = document.getElementById("btn_i");
 
-        isDisabled = false;
+      isDisabled = false;
 
-        btn_a.disabled = !isDisabled;
+      btn_a.disabled = !isDisabled;
 
-        btn_b.addEventListener("click", function() {
-          window.location.href = '/Bicolano';
-          btn_a.disabled = isDisabled;
-          btn_b.disabled = !isDisabled;
-          btn_c.disabled = isDisabled;
-          btn_i.disabled = isDisabled;
-        });
+      btn_b.addEventListener("click", function() {
+        window.location.href = '/Bicolano';
+        btn_a.disabled = isDisabled;
+        btn_b.disabled = !isDisabled;
+        btn_c.disabled = isDisabled;
+        btn_i.disabled = isDisabled;
+      });
 
-        btn_c.addEventListener("click", function() {
-          window.location.href = '/Cebuano';
-          btn_a.disabled = isDisabled;
-          btn_b.disabled = isDisabled;
-          btn_c.disabled = !isDisabled;
-          btn_i.disabled = isDisabled;
-        });
+      btn_c.addEventListener("click", function() {
+        window.location.href = '/Cebuano';
+        btn_a.disabled = isDisabled;
+        btn_b.disabled = isDisabled;
+        btn_c.disabled = !isDisabled;
+        btn_i.disabled = isDisabled;
+      });
 
-        btn_i.addEventListener("click", function() {
-          window.location.href = '/Ilocano';
-          btn_a.disabled = isDisabled;
-          btn_b.disabled = isDisabled;
-          btn_c.disabled = isDisabled;
-          btn_i.disabled = !isDisabled;
-        });
-      </script>
+      btn_i.addEventListener("click", function() {
+        window.location.href = '/Ilocano';
+        btn_a.disabled = isDisabled;
+        btn_b.disabled = isDisabled;
+        btn_c.disabled = isDisabled;
+        btn_i.disabled = !isDisabled;
+      });
+    </script>
+
+    {% include 'footer.html' %}
       
   </body>
 </html>
