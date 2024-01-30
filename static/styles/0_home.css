@@ -1,0 +1,107 @@
+@font-face {
+    font-family: Quiapo;
+    src: url("../fonts/Quiapo_Free.otf");
+}
+
+@font-face {
+    font-family: Maragsa;
+    src: url("../fonts/Maragsâ-Display.otf");
+}
+
+body{
+  background-color:#201b15
+  /* background-color:#efe1ba*/
+}
+
+#container-header{
+  background-color:#201b15;
+  margin: 0px;
+  max-width: 100%;
+}
+
+#container-footer{
+  background-color:#201b15;
+  /*margin: 0px;
+  max-width: 100%;*/
+}
+
+#text-footer{
+  color:white;
+}
+
+/* ALL */
+
+.text-box {
+    color: white;
+    /* position: absolute;*/
+    /* top: 30%;*/
+    /* left: 50%;*/
+    /* transform: translate(-50%, -50%);*/
+    text-align: center;
+}
+
+.text-box h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 140px;
+    font-family: Quiapo;
+    color: #efe1ba;
+}
+
+.text-box #one {
+    margin-top: 20px;
+    font-size: 34px;
+    font-family: Maragsa;
+    color: #d79922;
+}
+
+.text-box #two {
+    margin-top: 20px;
+    font-size: 34px;
+    font-family: Maragsa;
+    color: #efe1ba;
+}
+
+.text-box #three {
+    margin-top: 20px;
+    font-size: 34px;
+    font-family: Maragsa;
+    color: #efe1ba;
+}
+
+.text-box #four {
+    margin-top: 20px;
+    font-size: 34px;
+    font-family: Maragsa;
+    color: #efe1ba;
+}
+
+.transparent-search {
+  background-color: transparent;
+  border: none;
+  text-decoration-color: #fff;
+  border-bottom: 1px solid #ccc;
+  color: #fff;
+}
+
+.transparent-search::placeholder {
+  color: #fff;
+}
+
+.transparent-search:active{
+  color: #fff
+}
+
+.button {
+    background: transparent;
+    color: #efe1ba;
+    border-color:#efe1ba;
+    font-size: 25px;
+}
+
+.button:hover{
+    transition: 0.5s;
+    background: #d79922;
+    border-color:#d79922;
+    cursor: pointer;
+}
