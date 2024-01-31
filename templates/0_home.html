@@ -4,26 +4,34 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Salin Wiki</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/0_home.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/0_home.css') }}">
   </head>
+  
   <body>
-    {% include 'header.html' %} 
-    <div>
-      <img src="static/SWlogo02.png" height="50">
-      <h1 class="word">THE BEST WAY TO LEARN<br>PHILIPPINE LANGUAGES</h1>
-      <p class="lang">SalinWiki is the best Wiki site for your translation needs between<br>existing languages in the Philippines.</p>
-    </div
-      
-    <div>
-    <h6>Want to look up for a word?</h6>
-      <form action="#" method="post">
-        <p>Search:</p>
-        <p><input type="text" name="nm" /></p>
-        <p><input type="submit" value="submit" /></p>
-      </form>
-    </div>
 
+      <div>
+        {% include 'header.html' %} 
+      </div>
     
+      <div class="text-box">
+        <img src="static/SWlogo02.png" height="50">
+        <h1>THE BEST WAY TO LEARN<br>PHILIPPINE LANGUAGES</h1>
+        <span id="one">Salin</span><span id="two">Wiki is the best Wiki site for your translation needs between<br>existing languages in the Philippines.</span>
+        <p id="three">Want to look up for a word?</p>
+        
+        <div class="container mt-3">
+          <form class="form-inline my-2 my-lg-0 row" action="#" method="post">
+            <input class="transparent-search col" type="text" name="search" maxlength="32" >
+            <button class="button col" input type="submit" value="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    
+      <div>
+        {% include 'footer.html' %}
+      </div>
+        
+      
   </body>
 </html>

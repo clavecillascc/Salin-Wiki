@@ -21,8 +21,8 @@ body{
 
 #container-footer{
   background-color:#201b15;
-  /*margin: 0px;
-  max-width: 100%;*/
+  margin: 0px;
+  max-width: 100%;
 }
 
 #text-footer{
@@ -81,15 +81,15 @@ body{
   border: none;
   text-decoration-color: #fff;
   border-bottom: 1px solid #ccc;
-  color: #fff;
+  color: #efe1ba;
 }
 
 .transparent-search::placeholder {
-  color: #fff;
+  color: #efe1ba;
 }
 
 .transparent-search:active{
-  color: #fff
+  color: #efe1ba;
 }
 
 .button {
