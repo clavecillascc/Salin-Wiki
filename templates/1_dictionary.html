@@ -9,30 +9,52 @@
   </head>
   <body>
     
-    {% include 'header.html' %} 
-    
-    <div class="btn-group" role="group" aria-label="Basic outlined example">
-        <button type="button" class="btn btn-outline-primary" id="btn_a">ALL</button>
-        <button type="button" class="btn btn-outline-primary" id="btn_b">BICOLANO</button>
-        <button type="button" class="btn btn-outline-primary" id="btn_c">CEBUANO</button>
-        <button type="button" class="btn btn-outline-primary" id="btn_i">ILOCANO</button>
-    </div>
+  {% include 'header.html' %}
+  <div class="sort-container">
+    <p class="browse">Browse the list of words in these dictionaries</p>
+    <div class="two-columns">
+      <div class="column_search">
+          <img type="button" id="btn_a" src="static/All.png" height="200">
+      </div>
       
-    <div>
-      {% for word in words|sort(attribute="word")%}
-      <div>{{ word['word'] }}</div>
-      <div>{{ word['lang'] }}</div>
-      <div>
+      <div class="column_search">
+            <img  type="button" id="btn_b" src="static/Bicolano.png" height="200">
+      </div>
+        
+      <div class="column_search">
+            <img  type="button" id="btn_c" src="static/Cebuano.png" height="200">
+      </div>
+      
+      <div class="column_search">
+          <img type="button" id="btn_i" src="static/Ilocano.png" height="200">
+      </div>
+    </div>
+  </div>
+
+    <div class="two-columns">
+      <div class="column_search"></div>
+      <div class="column_search"></div>
+      <div class="column_search">
+    {% for word in words|sort(attribute="word")%}
+    <div class="searched-word-container">
+      <div class="word">{{ word['word'] }}</div>
+      <div class="lang1">{{ word['lang'] }}</div>
+      <div class="def">
         <p>: {{ word['def'] }}</p>
       </div>
-      <div>{{ word['src_ex'] }}</div>
-      <div>
+      <div class="src_ex">{{ word['src_ex'] }}</div>
+      <div class="lang2">
         <p>({{ word['lang'] }})</p>
       </div>
-      <div>{{ word['target_ex'] }}<p>(Tagalog)</p></div>
-      {% endfor %}
+      <div class="target_ex">{{ word['target_ex'] }}<p>(Tagalog)</p></div>
     </div>
-
+    {% endfor %}
+        </div>
+        <div class="column_search"></div>
+        <div class="column_search"></div>
+        </div>
+    <!-- TO CENTER (DRAFT) -->
+    
     <script>
       btn_a = document.getElementById("btn_a");
       btn_b = document.getElementById("btn_b");
