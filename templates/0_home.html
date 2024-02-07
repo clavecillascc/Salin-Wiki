@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Salin Wiki</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/0_home.css') }}">
   </head>
   
@@ -22,11 +23,27 @@
         
         <div class="container mt-3">
           <form class="form-inline my-2 my-lg-0 row" action="#" method="post">
-            <input class="transparent-search col" type="text" name="search" maxlength="32" >
-            <button class="button col" input type="submit" value="submit">Submit</button>
+            <input class="transparent-search col" type="text" name="search" placeholder="Search here!">
+            <button class="button" input type="submit" value="submit"><i class="bi bi-search"></i></button>
+
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            
           </form>
         </div>
       </div>
+
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
     
       <div>
         {% include 'footer.html' %}

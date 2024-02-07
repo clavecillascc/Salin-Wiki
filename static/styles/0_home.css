@@ -82,6 +82,7 @@ body{
   text-decoration-color: #fff;
   border-bottom: 1px solid #ccc;
   color: #efe1ba;
+  width: 100%;
 }
 
 .transparent-search::placeholder {
@@ -93,15 +94,19 @@ body{
 }
 
 .button {
-    background: transparent;
-    color: #efe1ba;
-    border-color:#efe1ba;
-    font-size: 25px;
+  background: transparent;
+  color: #efe1ba;
+  border-bottom-color:#efe1ba;
+  font-size: 25px;
+  border: none;
+  border-bottom: 1px solid #ccc;
 }
 
-.button:hover{
-    transition: 0.5s;
-    background: #d79922;
-    border-color:#d79922;
-    cursor: pointer;
+.button{
+  height: 50px;
+  width: 50px;
+}
+
+.row{
+  margin: 0px 200px 0px 200px;
 }
