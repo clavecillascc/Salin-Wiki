@@ -32,13 +32,53 @@ body{
 
 /* ALL */
 
-
 .two-columns {
     display: flex;
 }
 
 .column_search {
     flex: 1; 
+}
+
+.search-word-container {
+  text-align: center;
+  background-color: #efe1ba;
+  color: #d79922;
+  border-radius:20px;
+  padding: 0px 0px 0px 0px;
+  margin: 100px 50px 100px 50px;
+  height: 615px;
+  width: 615px;
+}
+
+.book{
+  font-size: 80px;
+  color: #d79922;
+}
+
+.here{
+  font-family: Quiapo;
+  color: #d79922;
+  font-size: 100px;
+}
+
+.defi{
+  font-family: Quiapo;
+  color: #d79922;
+  font-size: 100px;
+  margin-top: -70px;
+}
+
+.searched-word{
+  font-family: Quiapo;
+  color: black;
+  font-size: 100px;
+  margin-top: -70px;
+}
+
+.other{
+  color: #d79922;
+  font-size: 20px;
 }
 
 .searched-word-container {
@@ -48,7 +88,7 @@ body{
   padding: 60px 0px 0px 40px;
   margin: 100px 50px 100px 0px;
   height: 615px;
-  width: 910px;
+  width: 615px;
 }
 
 .word {
@@ -79,4 +119,40 @@ body{
 .target_ex {
   font-size: 20px;
   margin-left: 30px;
+}
+
+/* INPUT AND BUTTON */
+.transparent-search {
+  background-color: transparent;
+  border: none;
+  text-decoration-color: #201b15;
+  border-bottom: 1px solid #201b15;
+  color: #201b15;
+  width: 100%;
+}
+
+.transparent-search::placeholder {
+  color: #201b15;
+}
+
+.transparent-search:active{
+  color: #201b15;
+}
+
+.button {
+  background: transparent;
+  color: #201b15;
+  border-bottom-color:#201b15;
+  font-size: 25px;
+  border: none;
+  border-bottom: 1px solid #201b15;
+}
+
+.button{
+  height: 50px;
+  width: 50px;
+}
+
+.row{
+  margin: 0px 100px 0px 100px;
 }

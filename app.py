@@ -12,9 +12,11 @@ def salinwiki_home():
   else:
     return render_template('0_home.html')
 
-@app.route("/Search_<searched_word>")
+@app.route("/Search_<searched_word>", methods=["POST", "GET"])
 def search(searched_word):
   words = load_words_from_db()
+  if request.method == "POST":
+    searched_word = request.form["search"]
   searched_word = searched_word
   return render_template('search.html', searched_word=searched_word, words=words)
 
