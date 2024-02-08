@@ -49,10 +49,5 @@ def salinwiki_dictionary_ilocano():
   words = load_words_from_db()
   return render_template('1_dictionary_ilocano.html', words=words)
 
-@app.route("/Test")
-def salinwiki_test():
-  fw = featured_word_from_db()
-  return render_template('test.html', fw=fw)
-
 if __name__ == "__main__":
   app.run(host='0.0.0.0', port=8080)
