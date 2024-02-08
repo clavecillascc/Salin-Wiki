@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Salin Wiki</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+      <link rel="stylesheet" href="{{ url_for('static', filename='styles/1_dictionary.css') }}">
+  </head>
+  <body>
+    
+    {% include 'header.html' %} 
+    
+    <div class="sort-container">
+      <p class="browse">Browse the list of words in these dictionaries</p>
+      <div class="two-columns">
+        <div class="column_search">
+            <img type="button" id="btn_a" src="static/All.png" height="200">
+        </div>
+
+        <div class="column_search">
+              <img  type="button" id="btn_b" src="static/Bicolano.png" height="200">
+        </div>
+
+        <div class="column_search">
+              <img  type="button" id="btn_c" src="static/Cebuano.png" height="200">
+        </div>
+
+        <div class="column_search">
+            <img type="button" id="btn_i" src="static/Ilocano.png" height="200">
+        </div>
+      </div>
+    </div>
+      
+    <div class="two-columns">
+      <div class="column_search"></div>
+      <div class="column_search">
+      {% for word in words|sort(attribute="word") %}
+      {% if word['lang'] == 'Ilocano' %}
+        <div class="searched-word-container">
+          <div class="word">{{ word['word'] }}</div>
+          <div class="lang1">{{ word['lang'] }}</div>
+          <div class="def">
+            <p>: {{ word['def'] }}</p>
+          </div>
+          <div class="src_ex">{{ word['src_ex'] }}</div>
+          <div>
+            <p>({{ word['lang'] }})</p>
+          </div>
+          <div class="target_ex">{{ word['target_ex'] }}<p>(Tagalog)</p></div>
+        </div>
+      {% endif %}
+      {% endfor %}
+      </div>
+      <div class="column_search"></div>
+    </div>
+
+    <script>
+      btn_a = document.getElementById("btn_a");
+      btn_b = document.getElementById("btn_b");
+      btn_c = document.getElementById("btn_c");
+      btn_i = document.getElementById("btn_i");
+
+      isDisabled = false;
+
+      btn_i.disabled = !isDisabled;
+
+      btn_a.addEventListener("click", function() {
+        window.location.href = '/Dictionary';
+        btn_a.disabled = !isDisabled;
+        btn_b.disabled = isDisabled;
+        btn_c.disabled = isDisabled;
+        btn_i.disabled = isDisabled;
+      });
+
+      btn_b.addEventListener("click", function() {
+        window.location.href = '/Bicolano';
+        btn_a.disabled = isDisabled;
+        btn_b.disabled = !isDisabled;
+        btn_c.disabled = isDisabled;
+        btn_i.disabled = isDisabled;
+      });
+
+      btn_c.addEventListener("click", function() {
+        window.location.href = '/Cebuano';
+        btn_a.disabled = isDisabled;
+        btn_b.disabled = isDisabled;
+        btn_c.disabled = !isDisabled;
+        btn_i.disabled = isDisabled;
+      });
+      
+    </script>
+
+    {% include 'footer.html' %}
+      
+  </body>
+</html>

@@ -1,0 +1,158 @@
+@font-face {
+    font-family: Quiapo;
+    src: url("../fonts/Quiapo_Free.otf");
+}
+
+@font-face {
+    font-family: Maragsa;
+    src: url("../fonts/Maragsâ-Display.otf");
+}
+
+body{
+  /* background-color:#201b15 */
+  background-color:#efe1ba;
+  
+}
+
+#container-header{
+  background-color:#201b15;
+  margin: 0px;
+  max-width: 100%;
+}
+
+#container-footer{
+  background-color:#201b15;
+  margin: 0px;
+  max-width: 100%;
+}
+
+#text-footer{
+  color:white;
+}
+
+/* ALL */
+
+.two-columns {
+    display: flex;
+}
+
+.column_search {
+    flex: 1; 
+}
+
+.search-word-container {
+  text-align: center;
+  background-color: #efe1ba;
+  color: #d79922;
+  border-radius:20px;
+  padding: 0px 0px 0px 0px;
+  margin: 100px 50px 100px 50px;
+  height: 615px;
+  width: 615px;
+}
+
+.book{
+  font-size: 80px;
+  color: #d79922;
+}
+
+.here{
+  font-family: Quiapo;
+  color: #d79922;
+  font-size: 100px;
+}
+
+.defi{
+  font-family: Quiapo;
+  color: #d79922;
+  font-size: 100px;
+  margin-top: -70px;
+}
+
+.searched-word{
+  font-family: Quiapo;
+  color: black;
+  font-size: 100px;
+  margin-top: -70px;
+}
+
+.other{
+  color: #d79922;
+  font-size: 20px;
+}
+
+.searched-word-container {
+  background-color: #201b15;
+  color: #d79922;
+  border-radius:20px;
+  padding: 60px 0px 0px 40px;
+  margin: 100px 50px 100px 0px;
+  height: 615px;
+  width: 615px;
+}
+
+.word {
+  font-family: Maragsa;
+  font-size: 80px;
+}
+
+.lang1 {
+  font-size: 35px;
+  margin-top: -10px;
+}
+
+.def {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.src_ex {
+  font-size: 20px;
+  margin-left: 30px;
+}
+
+.lang2 {
+  font-size: 20px;
+  margin-left: 30px;
+}
+
+.target_ex {
+  font-size: 20px;
+  margin-left: 30px;
+}
+
+/* INPUT AND BUTTON */
+.transparent-search {
+  background-color: transparent;
+  border: none;
+  text-decoration-color: #201b15;
+  border-bottom: 1px solid #201b15;
+  color: #201b15;
+  width: 100%;
+}
+
+.transparent-search::placeholder {
+  color: #201b15;
+}
+
+.transparent-search:active{
+  color: #201b15;
+}
+
+.button {
+  background: transparent;
+  color: #201b15;
+  border-bottom-color:#201b15;
+  font-size: 25px;
+  border: none;
+  border-bottom: 1px solid #201b15;
+}
+
+.button{
+  height: 50px;
+  width: 50px;
+}
+
+.row{
+  margin: 0px 100px 0px 100px;
+}

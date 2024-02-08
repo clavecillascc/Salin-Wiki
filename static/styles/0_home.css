@@ -1,0 +1,182 @@
+@font-face {
+    font-family: Quiapo;
+    src: url("../fonts/Quiapo_Free.otf");
+}
+
+@font-face {
+    font-family: Maragsa;
+    src: url("../fonts/Maragsâ-Display.otf");
+}
+
+.space{
+  padding-bottom: 50px;
+}
+
+.header-footer-body1 {
+  background-color:#201b15
+}
+
+.body2 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color:#efe1ba
+}
+
+#container-header{
+  background-color:#201b15;
+  margin: 0px;
+  max-width: 100%;
+}
+
+#container-footer{
+  background-color:#201b15;
+  margin: 0px;
+  max-width: 100%;
+}
+
+#text-footer{
+  color:white;
+}
+
+/* ALL */
+
+.text-box {
+  color: #201b15;
+  text-align: center;
+  margin: 0px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 140px;
+    font-family: Quiapo;
+    color: #efe1ba;
+}
+
+#one {
+    margin-top: 20px;
+    font-size: 34px;
+    font-family: Maragsa;
+    color: #d79922;
+}
+
+#two {
+    margin-top: 20px;
+    font-size: 34px;
+    font-family: Maragsa;
+    color: #efe1ba;
+}
+
+#three {
+    margin-top: 20px;
+    font-size: 34px;
+    font-family: Maragsa;
+    color: #efe1ba;
+}
+
+#four {
+    margin-top: 20px;
+    font-size: 34px;
+    font-family: Maragsa;
+    color: #efe1ba;
+}
+
+.transparent-search {
+  background-color: transparent;
+  border: none;
+  text-decoration-color: #fff;
+  border-bottom: 1px solid #ccc;
+  color: #efe1ba;
+  width: 100%;
+}
+
+.transparent-search::placeholder {
+  color: #efe1ba;
+}
+
+.transparent-search:active{
+  color: #efe1ba;
+}
+
+.button {
+  background: transparent;
+  color: #efe1ba;
+  border-bottom-color:#efe1ba;
+  font-size: 25px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+
+.button{
+  height: 50px;
+  width: 50px;
+}
+
+.row{
+  margin: 0px 200px 0px 200px;
+}
+
+.searched-word-container {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #d79922;
+  color: #201b15;
+  border-radius:20px;
+  padding: 60px 40px 60px 40px;
+  height: 615px;
+  width: 910px;
+}
+
+.outer {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #201b15;
+  color: #d79922;
+  border-radius:20px;
+  height: 815px;
+  width: 1110px;
+}
+
+.asterisk{
+  margin-left: 100px;
+  font-size: 50px;
+  color: #d79922;
+}
+
+.ft{
+  font-family: Quiapo;
+  color: #d79922;
+  font-size: 50px;
+}
+
+.have{
+  margin-left: 100px;
+  color: #d79922;
+  font-size: 20px;
+}
+
+.word {
+  font-family: Maragsa;
+  font-size: 80px;
+}
+
+.lang1 {
+  font-size: 35px;
+  margin-top: -10px;
+}
+
+.def {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.src_ex {
+  font-size: 20px;
+  margin-left: 30px;
+}
+
+.target_ex {
+  font-size: 20px;
+  margin-left: 30px;
+}
