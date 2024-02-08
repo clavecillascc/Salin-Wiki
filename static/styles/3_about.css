@@ -8,7 +8,11 @@
     src: url("../fonts/Maragsâ-Display.otf");
 }
 
-.body-container{
+body {
+  background-color:#d79922;
+}
+
+.bg{
   background-color:#d79922
 }
 
@@ -48,11 +52,24 @@
   color: #efe1ba;
 }
 
-#two{
+#two {
   text-align: center;
   margin-top: 30px;
   font-size: 36px;
   font-family: Maragsa;
   color: #201b15;
 }
+
+.three-columns{
+  width: 100%;
+}
+
+.card{
+  width: 480px;
+}
+
+.column{
+  padding: 20px 0px 20px 75px;|
+}
+
 

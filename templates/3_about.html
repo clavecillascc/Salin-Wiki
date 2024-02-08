@@ -9,20 +9,76 @@
   </head>
   
   <body>
+    {% include 'header.html' %} 
+    
     <div class="body-container">
-      {% include 'header.html' %} 
 
       <div class="text-box">
         <img src="static/Ppl.png" height="75">
         <h1>HELP US BREAK EVERY<br>LANGUAGE BARRIER,<br>ONE TRANSLATION AT A TIME!</h1>
         <span id="two">Salin<span id="one">Wiki's</span> mission is to ensure that every Filipino can engage in meaningful <br> interactions without hindrance caused by differing languages.</span>
+      </div>
+
+      <div class="three-columns row row-cols-md-3 g-3">
+
+        <div class="column">
+        <div class="card shadow-sm">
+          <img src="static/bcn_aboutus.png" height="360px" width="480px">
+          <div class="card-body">
+            <p class="card-text">As the Project Manager for Kalimbahing Pating, he lead the team in developing and launching the SalinWiki web application. His role involves coordinating efforts, meeting deadlines, and ensuring a seamless delivery that exceeds stakeholder expectations.</p>
+          </div>
+        </div>
+        </div>
+        
+        <div class="column">
+          <div class="card shadow-sm">
+          <img src="static/imnp_aboutus.png" height="360px" width="480px">
+          <div class="card-body">
+            <p class="card-text">Kalimbahing Pating's resident Designer. He crafted intuitive user interfaces and captivating graphics that enhance the user experience. His creativity and attention to detail has been pivotal in bringing the vision of SalinWiki to life, ensuring its aesthetics are both functional and engaging. He has also assisted our lead Developer in programming the front-end portion of the web app.</p>
+          </div>
+        </div>
+        </div>
+        
+        <div class="column">
+          <div class="card shadow-sm">
+            <img src="static/ccc_aboutus.png" height="360px" width="480px">
+            <div class="card-body">
+              <p class="card-text">The lead Developer of Kalimbahing Pating. He took the crucial role of building and maintaining the functionality of the SalinWiki web application. His expertise in coding and problem-solving has contributed towards creating a seamless user experience, enabling users to access and interact with SalinWiki's features efficiently. He spearheaded the implementation of the web app's front end and back end.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="column">
+          <div class="card shadow-sm">
+            <img src="static/sodm_aboutus.png" height="360px" width="480px">
+            <div class="card-body">
+              <p class="card-text">Accepting the role of Analyst in Kalimbahing Pating, he leveraged data insights to optimize user engagement and platform performance of the SalinWiki web application. His role involves evaluating user behavior, identifying trends, and recommending strategic enhancements to ensure SalinWiki remains intuitive and effective for its users.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="column">
+          <div class="card shadow-sm">
+            <img src="static/ejfq_aboutus.png" height="360px" width="480px">
+            <div class="card-body">
+              <p class="card-text">Quality Assurance specialist of Kalimbahing Pating. He meticulously test and ensure the reliability and functionality of every aspect of the web application. His role involves identifying and resolving any issues or bugs, guaranteeing a seamless user experience and maintaining the highest standards of performance and reliability for the SalinWiki web application.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card shadow-sm">
+            <img src="static/sample_image.jpg" height="360px" width="480px">
+            <div class="card-body">
+              <p class="card-text">Our Mascot: Kalimbahing Pating (Pink Shark)</p>
+            </div>
+          </div>
+        </div>
 
       </div>
 
-      {% include 'footer.html' %}
-      
     </div>
 
-
+    {% include 'footer.html' %}
   </body>
 </html>
