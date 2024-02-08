@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/1_dictionary.css') }}">
   </head>
   <body>
+
+    {% include 'header.html' %}
     
-  {% include 'header.html' %}
-  <div class="sort-container">
+    <div class="sort-container">
     <p class="browse">Browse the list of words in these dictionaries</p>
     <div class="two-columns">
       <div class="column_search">
@@ -33,27 +34,24 @@
 
     <div class="two-columns">
       <div class="column_search"></div>
-      <div class="column_search"></div>
       <div class="column_search">
-    {% for word in words|sort(attribute="word")%}
-    <div class="searched-word-container">
-      <div class="word">{{ word['word'] }}</div>
-      <div class="lang1">{{ word['lang'] }}</div>
-      <div class="def">
-        <p>: {{ word['def'] }}</p>
+      {% for word in words|sort(attribute="word")%}
+        <div class="searched-word-container">
+          <div class="word">{{ word['word'] }}</div>
+          <div class="lang1">{{ word['lang'] }}</div>
+          <div class="def">
+            <p>: {{ word['def'] }}</p>
+          </div>
+          <div class="src_ex">{{ word['src_ex'] }}</div>
+          <div class="lang2">
+            <p>({{ word['lang'] }})</p>
+          </div>
+          <div class="target_ex">{{ word['target_ex'] }}<p>(Tagalog)</p></div>
+        </div>
+      {% endfor %}
       </div>
-      <div class="src_ex">{{ word['src_ex'] }}</div>
-      <div class="lang2">
-        <p>({{ word['lang'] }})</p>
-      </div>
-      <div class="target_ex">{{ word['target_ex'] }}<p>(Tagalog)</p></div>
+      <div class="column_search"></div>
     </div>
-    {% endfor %}
-        </div>
-        <div class="column_search"></div>
-        <div class="column_search"></div>
-        </div>
-    <!-- TO CENTER (DRAFT) -->
     
     <script>
       btn_a = document.getElementById("btn_a");
@@ -91,6 +89,6 @@
     </script>
 
     {% include 'footer.html' %}
-      
+
   </body>
 </html>
