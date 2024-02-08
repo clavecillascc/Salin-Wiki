@@ -8,7 +8,7 @@
     src: url("../fonts/Maragsâ-Display.otf");
 }
 
-body{
+body {
   background-color:#201b15
   /* background-color:#efe1ba*/
 }
@@ -33,10 +33,6 @@ body{
 
 .text-box {
     color: white;
-    /* position: absolute;*/
-    /* top: 30%;*/
-    /* left: 50%;*/
-    /* transform: translate(-50%, -50%);*/
     text-align: center;
 }
 

@@ -15,9 +15,9 @@ def salinwiki_home():
 @app.route("/Search_<searched_word>", methods=["POST", "GET"])
 def search(searched_word):
   words = load_words_from_db()
+  searched_word = searched_word
   if request.method == "POST":
     searched_word = request.form["search"]
-  searched_word = searched_word
   return render_template('search.html', searched_word=searched_word, words=words)
 
 @app.route("/Dictionary")
