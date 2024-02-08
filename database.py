@@ -1,4 +1,4 @@
-import os
+import os, random
 
 from sqlalchemy import create_engine, text
 
@@ -16,3 +16,11 @@ def load_words_from_db():
     for row in result.all():
       words.append(row._asdict())
     return words
+
+def featured_word_from_db():
+  with engine.connect() as conn:
+      result = conn.execute(text("SELECT * FROM words ORDER BY RAND() LIMIT 1"))
+      fw = []
+      for row in result.all():
+        fw.append(row._asdict())
+      return fw
